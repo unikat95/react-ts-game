@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      roboto: ["Roboto Mono", "monospace"],
+    },
     extend: {
       backgroundColor: {
         primary: "#2F2824",

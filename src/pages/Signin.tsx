@@ -11,6 +11,11 @@ import { CgSpinner } from "react-icons/cg";
 import { GameContext } from "../context/GameContext";
 import { Navigate } from "react-router-dom";
 
+import CoinIcon from "../assets/coin.svg";
+import WoodIcon from "../assets/wood.svg";
+import StoneIcon from "../assets/stone.svg";
+import IronIcon from "../assets/iron.svg";
+
 export default function Signin() {
   const { char } = useContext(GameContext) || {};
   const [isSignedIn, setIsSignedIn] = useState(true);
@@ -50,6 +55,32 @@ export default function Signin() {
           level: 1,
           xp: 0,
           xpToLvlUp: 21,
+          backpack: [
+            {
+              name: "Coin",
+              quantity: 0,
+              cap: 999,
+              icon: CoinIcon,
+            },
+            {
+              name: "Wood",
+              quantity: 0,
+              cap: 100,
+              icon: WoodIcon,
+            },
+            {
+              name: "Stone",
+              quantity: 0,
+              cap: 100,
+              icon: StoneIcon,
+            },
+            {
+              name: "Iron",
+              quantity: 0,
+              cap: 100,
+              icon: IronIcon,
+            },
+          ],
         };
 
         await setDoc(doc(db, "users", userId), userData);

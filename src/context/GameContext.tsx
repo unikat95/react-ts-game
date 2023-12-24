@@ -8,6 +8,13 @@ type GameProviderProps = {
   children: React.ReactNode;
 };
 
+export type BackpackItems = {
+  name: string;
+  quantity: number;
+  cap: number;
+  icon: string;
+};
+
 type CharData = {
   id: string;
   email: string;
@@ -15,6 +22,7 @@ type CharData = {
   level: number;
   xp: number;
   xpToLvlUp: number;
+  backpack: BackpackItems[] | null;
 };
 
 type GameContextProps = {
